@@ -42,6 +42,15 @@ INSERT INTO `cmps` (`id`, `name`, `cmp`, `username`, `fullname`) VALUES
 (1, 'f', 'f', 'admin', 'Kumar Ankesh');
 
 -- --------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `leads` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `phone_number` VARCHAR(15),
+    `message` TEXT,
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
 --
 -- Table structure for table `room_rental_registrations`
